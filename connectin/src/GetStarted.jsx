@@ -5,6 +5,8 @@ export default function GetStarted(props) {
     <div>
       This is GetStarted page.
       <br />
+      Smol modification.
+      <br />
     </div>
   );
 }
