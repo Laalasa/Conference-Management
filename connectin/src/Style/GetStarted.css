@@ -1,0 +1,48 @@
+.getStarted {
+  background-color: black;
+  height: 100vh;
+  font-family: "Comfortaa", cursive !important;
+}
+
+.btn-gs {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.btn-gs:hover {
+  color: #9d3cff;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-gs {
+  color: white;
+}
+
+.text-gs h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.text-gs p {
+  opacity: 90%;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-ctc {
+  background-color: #9d3cff;
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 5px 30px;
+}
+
+.btn-ctc:hover {
+  background-color: #6a16be;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.relative {
+  position: relative;
+  bottom: -40px;
+}
