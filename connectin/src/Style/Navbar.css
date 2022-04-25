@@ -1,0 +1,80 @@
+@import "./App.css";
+
+li {
+  display: table-cell;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-toggler {
+  border-width: 0px;
+  border-color: var(--sec-color) !important;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* .navbar-toggler-icon {
+  background-image: url(src/hamburger.png);
+} */
+
+.navbar-toggler:hover {
+  box-shadow: none;
+  border-width: 1.5px;
+}
+
+li a {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #282c35 !important;
+  text-decoration: none;
+  /* letter-spacing: 0.05em; */
+  display: inline-block;
+  position: relative;
+}
+
+li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "" !important;
+  display: block;
+  height: 1px !important;
+  left: 50%;
+  position: absolute;
+  background: #282c35;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 20px;
+}
+li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.footer a:hover {
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.active,
+.footer a {
+  color: #9d3cff !important;
+}
+
+.active::after {
+  width: 4px;
+  height: 4px !important;
+
+  background: #9d3cff !important;
+}
+
+.active:hover::after {
+  width: 4px;
+  height: 4px !important;
+  left: 50%;
+  background: #9d3cff !important;
+}

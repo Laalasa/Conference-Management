@@ -1,0 +1,55 @@
+@import "./App.css";
+
+.bg-black {
+  height: 100vh;
+}
+
+.row {
+  overflow: hidden !important;
+}
+
+.mt-6 {
+  margin-top: 25vh;
+}
+
+.text-field {
+  width: 30vw;
+  background-color: #f7efff;
+  border: 0px;
+}
+
+.text-field-sm {
+  width: 15vw;
+  background-color: #f7efff;
+  border: 0px;
+}
+
+.ctc {
+  background-color: #9d3cff;
+  color: #f7efff;
+  font-size: 20px;
+  padding: 8px 30px;
+}
+
+p a {
+  color: #9d3cff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.forgot-password {
+  font-size: 14px !important;
+}
+
+.forgot-password a {
+  font-size: 16px;
+}
+
+.m--1 {
+  margin-top: 0px !important;
+}
+
+.error {
+  color: red;
+}
