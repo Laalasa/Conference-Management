@@ -1,10 +1,13 @@
 .card-out {
   background: #ffffff;
-  box-shadow: 0px 43px 80px rgba(158, 148, 167, 0.13);
+  /* box-shadow: 0px 43px 80px rgba(158, 148, 167, 0.13); */
   border-radius: 50px;
   max-width: 300px;
   width: 18rem;
   padding: 0px !important;
+  margin: 20px auto !important;
+  border-color: #ffffff !important;
+  transition: all 300ms ease-in-out;
 }
 
 .card {
@@ -13,9 +16,27 @@
   max-width: 300px;
   width: 18rem;
   padding: 0px !important;
+  border-color: #ffffff !important;
 }
 
 .card img {
   margin: 0px !important;
   border-radius: 50px 50px 0px 0px;
+}
+
+.card-out:hover {
+  box-shadow: 0px 43px 80px rgba(110, 100, 120, 0.15);
+  transform: translateY(-10px);
+}
+
+.card-img-div {
+  /* height: 200px !important; */
+  overflow: hidden !important;
+  width: 17.9rem;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.card-img-top {
+  height: 150px;
+  width: auto;
 }

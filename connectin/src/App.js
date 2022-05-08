@@ -8,7 +8,12 @@ import { Authentication } from "./Components/Data/auth";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import PrivateRoute from "./Components/PrivateRoute";
 import FindEvent from "./Components/Events/FindEvent";
-
+import Event from "./Components/Events/Event";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import HostEvent from "./Components/Host/HostEvent";
+import Upcoming from "./Components/Dashboard/Upcoming";
+import Past from "./Components/Dashboard/Past";
+import Hosted from "./Components/Dashboard/Hosted";
 function App() {
   return (
     <div className="App">
@@ -20,6 +25,12 @@ function App() {
               <Route path="/login" element={<LogIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/findevent" element={<FindEvent />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/hostevent" element={<HostEvent />} />
+              <Route path="/upcoming" element={<Upcoming />} />
+              <Route path="/past" element={<Past />} />
+              <Route path="/hosted" element={<Hosted />} />
+              <Route path="/event" element={<Event desc="sjfvau fgjsfgje" />} />
             </Routes>
           </Router>
         }

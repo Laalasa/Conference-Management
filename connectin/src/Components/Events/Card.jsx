@@ -3,7 +3,7 @@ import img from "../../Assets/conf.png";
 import "../../Style/Card.css";
 import { Link } from "react-router-dom";
 
-export default function Card() {
+export default function Card(props) {
   return (
     // <div>
     //   <button className="text-start card">
@@ -15,14 +15,15 @@ export default function Card() {
     //   </button>
     // </div>
     <div className="card-out">
-      <Link to={"/signup"} style={{ textDecoration: "none" }}>
+      <Link to={"/event"} style={{ textDecoration: "none" }}>
         <button class="card mt-3 mb-3">
-          <img class="card-img-top" src={img} alt="Card image cap" />
+          <div className="card-img-div">
+            <img class="card-img-top" src={props.Image} alt="Card image cap" />
+          </div>
           <div class="card-body text-start">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{props.Name}</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {props.Date}, {props.Start}
             </p>
           </div>
         </button>

@@ -10,10 +10,16 @@
 
 .nav-btn-tri {
   background-color: #9d3cff !important;
+  height: 56px;
+  border-radius: 20px !important;
+  font-size: 18px !important;
+  text-transform: capitalize !important;
+  transition: all 300ms ease-in-out !important;
 }
 
 .nav-btn-tri:hover {
-  background-color: #9d3cff !important;
+  background-color: #6f1dc0 !important;
+  box-shadow: none !important;
 }
 
 .border-1 {

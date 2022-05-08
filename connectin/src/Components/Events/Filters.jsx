@@ -27,7 +27,7 @@ export default function TemporaryDrawer(props) {
       <div className="text-center mt-5 p-3 txt">
         <h2 className="txt">Filters</h2>
         <br />
-        <div className="mb-3">
+        {/* <div className="mb-3">
           Location
           <input
             className="mb-3 rounded border-1"
@@ -35,7 +35,7 @@ export default function TemporaryDrawer(props) {
             value={props.locFilter}
             onChange={(e) => props.onLocSet(e.target.value)}
           ></input>
-        </div>
+        </div> */}
         <div className="mb-3">
           Categories
           <input
@@ -46,11 +46,11 @@ export default function TemporaryDrawer(props) {
           ></input>
         </div>
         <div className="mb-3">
-          Desired Salary
+          Conference Fee
           <Slider />
         </div>
         <div className="mb-3">
-          Job Type
+          Conference Type
           <div className="border rounded p-2 mt-3 m-3 checkbox">
             <input
               className="ms-2 me-2 rounded"
@@ -58,14 +58,14 @@ export default function TemporaryDrawer(props) {
               checked={props.partTime}
               onChange={() => props.onPartTimeCheck(!props.partTime)}
             ></input>
-            Part-Time &nbsp;
+            Free &nbsp;
             <input
               className="ms-2 me-2 rounded"
               type="checkbox"
               checked={props.fullTime}
               onChange={() => props.onFullTimeCheck(!props.fullTime)}
             ></input>
-            Full-Time
+            Paid
           </div>
         </div>
         <div className="mb-3 mt-5">
@@ -93,8 +93,8 @@ export default function TemporaryDrawer(props) {
   return (
     <span>
       <div className="row mt-4">
-        <div className="col ms-5">
-          <form action="" class="input-group">
+        <div className="col">
+          <form action="" class="input-group mb-5">
             <input
               type="text"
               class="form-control"
@@ -111,7 +111,7 @@ export default function TemporaryDrawer(props) {
             </button>
           </form>
         </div>
-        <div className="col mt-5 text-end">
+        <div className="col text-end">
           {["right"].map((anchor) => (
             <React.Fragment key={anchor}>
               <Button
