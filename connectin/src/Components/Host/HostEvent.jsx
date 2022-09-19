@@ -24,6 +24,7 @@ export default function HostEvent() {
   const [date, setDate] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
+  const [meet, setMeet] = useState("");
   const [desc, setDesc] = useState("");
   const [fee, setFee] = useState("");
   const [image, setImage] = useState(
@@ -89,6 +90,7 @@ export default function HostEvent() {
       EndTime: end,
       Description: desc,
       Fee: fee,
+      Meet: meet,
       Image: image,
       UserID: user.uid,
     };
@@ -97,21 +99,23 @@ export default function HostEvent() {
     // const userColRef = collection(db, "Users", user.uid);
 
     try {
-      addDoc(eventColRef, data).then(
-        (value) => {
-          // updateDoc(userColRef, { array: arrayUnion(value.id) });
-        },
-        setName(""),
-        setEmail(""),
-        setDate(""),
-        setStart(""),
-        setEnd(""),
-        setDesc(""),
-        setFee(""),
-        setImage(
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxk0JzA3-sHBiHOFJuurRkW8axDgoq8hYooA&usqp=CAU"
-        )
-      );
+      addDoc(eventColRef, data)
+        .then
+        // (value) => {
+        //   updateDoc(userColRef, { hosted: arrayUnion(value.id) });
+        // },
+        // setName(""),
+        // setEmail(""),
+        // setDate(""),
+        // setStart(""),
+        // setEnd(""),
+        // setMeet(""),
+        // setDesc(""),
+        // setFee(""),
+        // setImage(
+        //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxk0JzA3-sHBiHOFJuurRkW8axDgoq8hYooA&usqp=CAU"
+        // )
+        ();
     } catch (error) {
       console.log(error);
     }
@@ -167,7 +171,16 @@ export default function HostEvent() {
                 class="form-control"
               />
             </div>
-
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Meet Link</label>
+              <input
+                type="link"
+                onChange={(e) => setMeet(e.target.value)}
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></input>
+            </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">
                 Conference Details

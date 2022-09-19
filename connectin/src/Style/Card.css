@@ -1,3 +1,9 @@
+@import "App.css";
+
+.dialog {
+  background-color: #f7efff !important;
+}
+
 .card-out {
   background: #ffffff;
   /* box-shadow: 0px 43px 80px rgba(158, 148, 167, 0.13); */
@@ -29,14 +35,87 @@
   transform: translateY(-10px);
 }
 
-.card-img-div {
-  /* height: 200px !important; */
-  overflow: hidden !important;
+/* .card-img-div { */
+/* height: 200px !important; */
+/* overflow: hidden !important;
   width: 17.9rem;
   border-radius: 50px 50px 0px 0px;
-}
+} */
 
-.card-img-top {
+/* .card-img-top {
   height: 150px;
   width: auto;
+} */
+
+.button {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.MuiToolbar-root {
+  background-color: #9d3cff !important;
+  box-shadow: none !important;
+}
+
+.MuiPaper-root {
+  background-color: #f9f9f9 !important;
+  box-shadow: none !important;
+}
+
+.col-md-7 img {
+  height: 225px;
+  border-radius: 10px;
+  /* width: 400px; */
+}
+
+.card-out-dash {
+  width: 15rem;
+  margin-bottom: 20px;
+}
+
+.card-dash img {
+  width: 15rem;
+}
+
+.nav-btn-tri-pop {
+  color: white;
+  background-color: #9d3cff !important;
+  height: 40px !important;
+  width: 400px;
+  border-radius: 10px !important;
+  border: none;
+  font-size: 18px !important;
+  text-transform: capitalize !important;
+  transition: all 300ms ease-in-out !important;
+}
+
+.nav-btn-tri-pop:hover {
+  background-color: #6916bc !important;
+}
+.col-md-7 h2 {
+  color: #9d3cff;
+}
+
+.col {
+  font-weight: 700 !important;
+}
+
+.background {
+  background: #ffffff;
+  box-shadow: 0px 43px 80px rgba(158, 148, 167, 0.13);
+  border-radius: 10px;
+}
+
+.sponsors {
+  color: #9d3cff;
+  height: 900px !important;
+}
+
+.boxx {
+  width: 70px !important;
+  height: 70px !important;
+  margin-bottom: 1000px !important;
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(158, 148, 167, 0.13);
+  border-radius: 20px;
 }

@@ -14,6 +14,8 @@ import HostEvent from "./Components/Host/HostEvent";
 import Upcoming from "./Components/Dashboard/Upcoming";
 import Past from "./Components/Dashboard/Past";
 import Hosted from "./Components/Dashboard/Hosted";
+import Profile from "./Components/Dashboard/Profile";
+
 function App() {
   return (
     <div className="App">
@@ -30,7 +32,7 @@ function App() {
               <Route path="/upcoming" element={<Upcoming />} />
               <Route path="/past" element={<Past />} />
               <Route path="/hosted" element={<Hosted />} />
-              <Route path="/event" element={<Event desc="sjfvau fgjsfgje" />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </Router>
         }

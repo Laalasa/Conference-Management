@@ -26,7 +26,7 @@ export default function GetStarted(props) {
             <div className="col-lg-6 text-gs mt-5">
               <h1>
                 All your conferences, <br />
-                all on ConnectIn
+                all on ConfiTech
               </h1>
               <p>
                 Create immersive virtual, hybrid, and in-person event

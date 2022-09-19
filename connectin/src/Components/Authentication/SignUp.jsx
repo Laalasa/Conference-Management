@@ -14,7 +14,8 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, collection } from "firebase/firestore";
 import { useAuthContext } from "../Data/auth";
 import { Link } from "react-router-dom";
-import { addDoc } from "firebase/firestore";
+import { doc, setDoc, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   let [email, setEmail] = useState("");
@@ -24,6 +25,7 @@ export default function SignUp() {
   let [lastName, setLastName] = useState("");
   let [error, setError] = useState("");
 
+  const navigate = useNavigate();
   const auth = getAuth();
   const handleFirstChange = (e) => {
     e.preventDefault();
@@ -43,19 +45,21 @@ export default function SignUp() {
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
         .then((cred) => {
-          console.log("user created: ", cred.user);
+          console.log("user created: ", cred.user.uid);
+          // const userRef = doc(db, "Users", cred.user.uid);
+          // setDoc(userRef);
+          setDoc(doc(db, "Users", cred.user.uid), {
+            Email: email,
+            FirstName: firstName,
+            LastName: lastName,
+          });
+          navigate("/findevent");
         })
         .catch((error) => {
           console.log(error.message);
         });
       const db = getFirestore();
       const colRef = collection(db, "Users");
-
-      addDoc(colRef, {
-        Email: email,
-        FirstName: firstName,
-        LastName: lastName,
-      });
     } else {
       alert("Password doesn't match");
     }
